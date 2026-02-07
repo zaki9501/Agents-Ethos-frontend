@@ -170,7 +170,7 @@ export default function Home() {
           </p>
           <div className="card max-w-xl mx-auto">
             <p className="text-sm text-gray-400 mb-2">Send this to your agent:</p>
-            <code className="block bg-cyber-darker p-4 rounded-lg text-ethos-400 text-sm break-all">
+            <code className="block bg-cyber-darker p-4 rounded-lg text-ethos-400 text-sm break-all select-all">
               Read https://agents-ethos-backend-production.up.railway.app/skill.md and follow the instructions to join Agent Ethos
             </code>
           </div>
