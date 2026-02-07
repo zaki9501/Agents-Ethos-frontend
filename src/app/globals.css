@@ -1,0 +1,125 @@
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&family=Orbitron:wght@400;500;600;700;800;900&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --cyber-dark: #0a0f1a;
+  --cyber-darker: #060a12;
+  --cyber-accent: #00ff9d;
+  --cyber-glow: rgba(0, 255, 157, 0.3);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: linear-gradient(135deg, var(--cyber-darker) 0%, var(--cyber-dark) 50%, #0d1520 100%);
+  min-height: 100vh;
+  color: #e2e8f0;
+  font-family: 'JetBrains Mono', monospace;
+}
+
+/* Cyber grid background */
+.cyber-grid {
+  background-image: 
+    linear-gradient(rgba(0, 255, 157, 0.03) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(0, 255, 157, 0.03) 1px, transparent 1px);
+  background-size: 50px 50px;
+}
+
+/* Glowing border effect */
+.glow-border {
+  border: 1px solid rgba(0, 255, 157, 0.3);
+  box-shadow: 
+    0 0 10px rgba(0, 255, 157, 0.1),
+    inset 0 0 10px rgba(0, 255, 157, 0.05);
+}
+
+.glow-border:hover {
+  border-color: rgba(0, 255, 157, 0.5);
+  box-shadow: 
+    0 0 20px rgba(0, 255, 157, 0.2),
+    inset 0 0 15px rgba(0, 255, 157, 0.1);
+}
+
+/* Accent text glow */
+.text-glow {
+  text-shadow: 0 0 10px rgba(0, 255, 157, 0.5);
+}
+
+/* Score colors */
+.score-positive {
+  color: #00ff9d;
+  text-shadow: 0 0 8px rgba(0, 255, 157, 0.5);
+}
+
+.score-negative {
+  color: #ff4757;
+  text-shadow: 0 0 8px rgba(255, 71, 87, 0.5);
+}
+
+.score-neutral {
+  color: #ffd93d;
+  text-shadow: 0 0 8px rgba(255, 217, 61, 0.5);
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--cyber-darker);
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(0, 255, 157, 0.3);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(0, 255, 157, 0.5);
+}
+
+/* Button styles */
+.btn-primary {
+  @apply px-6 py-3 bg-gradient-to-r from-ethos-600 to-ethos-500 text-white font-semibold rounded-lg;
+  @apply hover:from-ethos-500 hover:to-ethos-400 transition-all duration-300;
+  @apply shadow-lg shadow-ethos-500/20 hover:shadow-ethos-500/40;
+}
+
+.btn-secondary {
+  @apply px-6 py-3 bg-transparent border border-ethos-500/50 text-ethos-400 font-semibold rounded-lg;
+  @apply hover:bg-ethos-500/10 hover:border-ethos-400 transition-all duration-300;
+}
+
+/* Card styles */
+.card {
+  @apply bg-cyber-dark/80 backdrop-blur-sm rounded-xl p-6;
+  @apply border border-ethos-500/20 hover:border-ethos-500/40;
+  @apply transition-all duration-300;
+}
+
+/* Input styles */
+.input {
+  @apply w-full px-4 py-3 bg-cyber-darker border border-ethos-500/30 rounded-lg;
+  @apply text-white placeholder-gray-500;
+  @apply focus:outline-none focus:border-ethos-400 focus:ring-1 focus:ring-ethos-400/50;
+  @apply transition-all duration-200;
+}
+
+/* Animation delays for staggered effects */
+.delay-100 { animation-delay: 100ms; }
+.delay-200 { animation-delay: 200ms; }
+.delay-300 { animation-delay: 300ms; }
+.delay-400 { animation-delay: 400ms; }
+.delay-500 { animation-delay: 500ms; }
+
