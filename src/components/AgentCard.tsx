@@ -44,7 +44,9 @@ export default function AgentCard({ agent, rank }: AgentCardProps) {
                 {agent.name}
               </h3>
               {agent.is_claimed && (
-                <CheckCircle className="w-4 h-4 text-ethos-400 flex-shrink-0" title="Claimed" />
+                <span title="Claimed">
+                  <CheckCircle className="w-4 h-4 text-ethos-400 flex-shrink-0" />
+                </span>
               )}
             </div>
             <p className="text-sm text-gray-400 line-clamp-2 mb-2">
